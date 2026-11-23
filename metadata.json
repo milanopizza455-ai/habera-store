@@ -1,0 +1,6 @@
+{
+  "name": "HABERA — Luxury Modest Fashion",
+  "description": "HABERA is a modern modest fashion house in Pakistan offering curated Abayas, Stoles, Hijabs, Saudi Niqabs, Regular Niqabs, and Khimars in PKR.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

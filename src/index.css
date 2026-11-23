@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --color-habera-black: #101010;
+  --color-habera-beige: #E8DDCC;
+  --color-habera-gold: #C6A15B;
+  --color-habera-cream: #FAF7F1;
+  --color-habera-charcoal: #3A352F;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #FAF7F1;
+    color: #101010;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-serif);
+  }
+}
+
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-ltr {
+  display: flex;
+  width: max-content;
+  animation: marquee-ltr 42s linear infinite;
+}
+
+.animate-marquee-ltr:hover {
+  animation-play-state: paused;
+}
+
+@keyframes whatsapp-float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-whatsapp-gentle {
+  animation: whatsapp-float 3.2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee-ltr,
+  .animate-whatsapp-gentle {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
